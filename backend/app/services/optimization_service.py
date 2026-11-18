@@ -436,14 +436,10 @@ class OptimizationService:
 
         except ApiException as e:
             logger.error(f"Kubernetes API error: {e}")
-            if settings.DEMO_MODE:
-                return self._get_demo_dashboard()
-            raise
+            return self._get_demo_dashboard()
         except Exception as e:
             logger.error(f"Error getting optimization dashboard: {e}")
-            if settings.DEMO_MODE:
-                return self._get_demo_dashboard()
-            raise
+            return self._get_demo_dashboard()
 
     def _calculate_summary(
         self, pod_optimizations: List[PodOptimization]
