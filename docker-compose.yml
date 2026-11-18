@@ -55,7 +55,7 @@ services:
       # Kubernetes
       - K8S_IN_CLUSTER=false
       - K8S_CONFIG_PATH=/home/kubesight/.kube/config
-      - K8S_HOST_OVERRIDE=host.docker.internal
+      - K8S_HOST_OVERRIDE=172.17.0.1
       # AI Provider
       - AI_PROVIDER=groq
       - GROQ_API_KEY=${GROQ_API_KEY:-}
