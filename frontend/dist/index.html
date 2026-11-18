@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KubeSight AI</title>
+    <script>
+      // Apply theme before React loads to prevent flash
+      (function() {
+        const stored = localStorage.getItem('kubesight-theme');
+        if (stored === 'dark' || stored === 'light') {
+          document.documentElement.classList.add(stored);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.add('light');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-Dyy8avrU.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-react-DnJqyJKA.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-ui-C1sJKFGw.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-utils-BMRd4WWG.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-charts-Dr9bi9v2.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DASD2zQc.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
